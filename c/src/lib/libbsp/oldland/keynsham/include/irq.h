@@ -1,0 +1,9 @@
+#ifndef _KEYNSHAM_IRQ_H
+#define _KEYNSHAM_IRQ_H
+
+#define BSP_INTERRUPT_VECTOR_MIN 0
+#define BSP_INTERRUPT_VECTOR_MAX 31
+
+#define KEYNSHAM_TIMER0_IRQ 0
+
+#endif /* _KEYNSHAM_IRQ_H */
