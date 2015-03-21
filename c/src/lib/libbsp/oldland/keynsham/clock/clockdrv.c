@@ -57,7 +57,8 @@ static void keynsham_clock_cleanup(void)
 
 static uint32_t keynsham_clock_nanoseconds_since_last_tick(void)
 {
-	return timer_read(TIMER_COUNT_REG_OFFS) * KEYNSHAM_NS_PER_CYCLE;
+	return (TIMER0_RELOAD - timer_read(TIMER_COUNT_REG_OFFS)) *
+		KEYNSHAM_NS_PER_CYCLE;
 }
 
 CPU_Counter_ticks _CPU_Counter_read(void)
